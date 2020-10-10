@@ -1,0 +1,7 @@
+#!/bin/bash
+g++ *.cpp -o output
+./output
+
+gnuplot -e "plot 'smoothfuncExactSol.dat' u 1:2 title 'Smooth Func' w linespoints lt 1,
+ 'smoothfunc.dat' u 1:2 title 'Chebyshev Points' w points lt 5;
+ pause mouse keypress"
